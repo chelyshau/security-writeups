@@ -4,7 +4,7 @@ Hands-on penetration testing lab writeups covering network pivoting, internal
 network attacks, and web application exploitation methodology.
 
 **About me:** Independent penetration tester and security consultant with
-8+ years of information security experience, including 6 years on the
+10+ years of information security experience, including 6 years on the
 defensive side (SIEM, DLP, vulnerability management, PCI DSS compliance) at
 a bank, followed by hands-on offensive security work. Holds PNPT (Practical
 Network Penetration Tester) and CEH certifications.
