@@ -7,7 +7,7 @@
 After pivoting into the internal network (see Part 1: Network Pivoting
 Techniques), I found an internal host running a self-hosted Git server with
 a PHP-based web front end. Rather than relying on exploit-db for a known CVE,
-I pulled the application's own source and reviewed it directly — this
+I pulled the application's own source and reviewed it directly - this
 writeup walks through that process: enumeration, source acquisition, manual
 code review, building a working remote-code-execution proof of concept, and
 post-exploitation.
@@ -16,14 +16,14 @@ post-exploitation.
 
 A host-discovery sweep of the internal subnet (`nmap -sn`) turned up several
 live hosts beyond the pivot box itself. A full TCP port scan against the
-most interesting one showed HTTP, RDP, and WinRM open — a Windows host
+most interesting one showed HTTP, RDP, and WinRM open - a Windows host
 serving a web application, which made it a reasonable next target: a
 custom or lightly-maintained web app is usually a better entry point than
 trying to attack RDP/WinRM directly.
 
 ## Source Acquisition
 
-The web application exposed its `.git` directory publicly — a common
+The web application exposed its `.git` directory publicly - a common
 misconfiguration where a deployment process copies the whole project
 directory, version control metadata included, straight into the webroot.
 I used **GitTools** (specifically its `Extractor` component) to pull the
@@ -38,7 +38,7 @@ user-controlled input reached a system call, file operation, or database
 query without being sanitized. The application had a feature for running
 server-side Git operations that was implemented by shelling out to the
 system's `git` binary and interpolating a request parameter directly into
-that command string — classic unsanitized command concatenation. Because
+that command string - classic unsanitized command concatenation. Because
 the parameter was never filtered for shell metacharacters, anything an
 attacker could place in that field would execute in the context of the web
 server process.
@@ -47,7 +47,7 @@ server process.
 
 I confirmed the vulnerability by sending a crafted HTTP POST request where
 the vulnerable parameter contained a PowerShell one-liner instead of a
-legitimate Git argument — a reverse-shell stager that opened a TCP
+legitimate Git argument - a reverse-shell stager that opened a TCP
 connection back to a listener on my attack box and piped commands through
 it. The request executed successfully and returned a shell running as the
 web service's own account.
@@ -55,7 +55,7 @@ web service's own account.
 ## Privilege Confirmation & Impact
 
 Running `whoami` through the resulting shell showed it was running as a
-highly privileged local service account — not just "a shell on the box,"
+highly privileged local service account - not just "a shell on the box,"
 but one with enough rights to create new local accounts directly. To
 demonstrate real-world impact rather than stopping at code execution, I
 created a new local user and added it to the local Administrators and
@@ -83,7 +83,7 @@ a handful of steps.
   account had local administrative rights it did not need for its function.
 
 **Recommendations:**
-1. Never build shell commands by string concatenation with user input — use
+1. Never build shell commands by string concatenation with user input - use
    language-level Git bindings or a strict argument allow-list instead.
 2. Exclude `.git` (and other VCS metadata) from the web server's document
    root in the deployment pipeline, or block access to it at the web server
