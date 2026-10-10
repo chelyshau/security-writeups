@@ -4,8 +4,8 @@
 
 ## Overview
 
-After pivoting into the internal network (see Part 1: Network Pivoting
-Techniques), I found an internal host running a self-hosted Git server with
+After pivoting into the internal network (see [Part 1: Network Pivoting
+Techniques](01-pivoting-techniques.md)), I found an internal host running a self-hosted Git server with
 a PHP-based web front end. Rather than relying on exploit-db for a known CVE,
 I pulled the application's own source and reviewed it directly - this
 writeup walks through that process: enumeration, source acquisition, manual
