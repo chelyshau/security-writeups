@@ -60,7 +60,7 @@ This is a per-port relay, not a full proxy, so it's best for forwarding one
 or two known services (e.g., RDP or a specific web port) rather than general
 network access. Metasploit's own docs note it's being superseded by the
 `auxiliary/server/socks_proxy` module plus proxychains for exactly that
-reason — I used the SOCKS module instead once I needed to reach more than
+reason - I used the SOCKS module instead once I needed to reach more than
 one host.
 
 ## 3. Chisel
@@ -91,14 +91,14 @@ socat TCP-LISTEN:<local_port>,fork TCP:<target_host>:<target_port>
 ```
 
 I used socat to relay a single reverse-shell callback through the foothold
-to a host that otherwise had no route back to my attack box — simple,
+to a host that otherwise had no route back to my attack box - simple,
 no dependencies beyond the binary itself, but it has to be set up
 per-connection and doesn't proxy arbitrary traffic the way a SOCKS solution
 does.
 
 ## 5. sshuttle
 
-Essentially a transparent VPN built on top of SSH — no SOCKS configuration
+Essentially a transparent VPN built on top of SSH - no SOCKS configuration
 or proxychains needed, since it rewrites the local routing table:
 
 ```
@@ -108,7 +108,7 @@ sshuttle -r user@foothold <internal_subnet>/24
 Once running, any tool on the attack box (nmap, curl, browsers) could reach
 the internal subnet directly, with no per-tool proxy configuration. This was
 the fastest way to re-run a full `nmap` sweep against the internal range once
-the foothold was established — much less setup friction than reconfiguring
+the foothold was established - much less setup friction than reconfiguring
 proxychains for a scanning tool that doesn't support SOCKS natively.
 
 ## Comparison
@@ -124,7 +124,7 @@ proxychains for a scanning tool that doesn't support SOCKS natively.
 ## Takeaways
 
 - SSH-based options (dynamic forwarding, sshuttle) are the lowest-friction
-  choice whenever SSH access to the pivot is already available — no extra
+  choice whenever SSH access to the pivot is already available - no extra
   binaries to transfer, and sshuttle in particular removes the need for
   proxy-aware tooling entirely.
 - Chisel is the better fit once SSH isn't an option or the environment
