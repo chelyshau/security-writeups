@@ -1,7 +1,8 @@
 # Security Writeups
 
 Hands-on penetration testing lab writeups covering network pivoting, internal
-network attacks, and web application exploitation methodology.
+network attacks, web application exploitation methodology, and SQL injection
+testing methodology.
 
 **About me:** Independent penetration tester and security consultant with
 10+ years of information security experience, including 6 years on the
@@ -23,6 +24,10 @@ Network Penetration Tester) and CEH certifications.
 3. [Kerberoasting in Practice: From Service Tickets to Active Directory Compromise](03-kerberoasting-ad-attack-path.md)
    - requesting Kerberos service tickets, offline cracking with hashcat,
    and turning a low-privilege foothold into a domain compromise path.
+4. [Beyond sqlmap: A Practical Methodology for Manual SQL Injection Testing](04-manual-sqli-methodology.md)
+   - manual detection order (error-based, boolean-blind, time-based, out-of-band),
+   second-order injection, NoSQL/GraphQL/ORM contexts, evidence standards,
+   and remediation guidance.
 
 All writeups are based on hands-on work in isolated training lab environments
 (TryHackMe). No real client or production data is included.
