@@ -28,6 +28,16 @@ Network Penetration Tester) and CEH certifications.
    - manual detection order (error-based, boolean-blind, time-based, out-of-band),
    second-order injection, NoSQL/GraphQL/ORM contexts, evidence standards,
    and remediation guidance.
+5. [Broken Access Control: 12 Academy Labs, 5 Patterns](05-access-control-labs.md)
+   - twelve Academy labs collapsing into five patterns: missing checks,
+   client-controlled role signals, object references without ownership checks,
+   partial-flow checks, and trust in client-controlled headers.
+6. [Server-Side Request Forgery: 4 Academy Labs, 3 Patterns](06-ssrf-labs.md)
+   - four Academy labs in three patterns: open fetch parameters, blacklist
+   bypasses, and parser disagreement with open redirects as a bridge.
+7. [SQL Injection Academy Labs: 6 Labs, 4 Oracles](07-sqli-academy-labs.md)
+   - six Academy labs through four oracles: filter bypass, boolean content
+   and error oracles, time delays, and visible errors.
 
 All writeups are based on hands-on work in isolated training lab environments
 (TryHackMe). No real client or production data is included.
