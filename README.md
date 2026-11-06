@@ -40,4 +40,5 @@ Network Penetration Tester) and CEH certifications.
    and error oracles, time delays, and visible errors.
 
 All writeups are based on hands-on work in isolated training lab environments
-(TryHackMe). No real client or production data is included.
+(PortSwigger Web Security Academy and TryHackMe labs). No real client or
+production data is included.
