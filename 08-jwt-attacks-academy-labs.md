@@ -1,6 +1,6 @@
 # JWT Attacks Academy Labs: Every Attack Is a Verification Failure
 
-**Final draft.** PortSwigger Web Security Academy, JWT attacks topic, solved as training (labs 28-33 in my own index). These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
+PortSwigger Web Security Academy, JWT attacks topic, solved as training (labs 28-33 in my own index). These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
 
 ## The point
 

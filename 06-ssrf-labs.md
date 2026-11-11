@@ -1,6 +1,6 @@
 # Server-Side Request Forgery: 4 Academy Labs, 3 Patterns
 
-**Final draft.** PortSwigger Web Security Academy, SSRF topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology. One blind SSRF lab is parked, not solved: it needs Burp Collaborator, which is Pro-only, and I run Community.
+PortSwigger Web Security Academy, SSRF topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology. One blind SSRF lab is parked, not solved: it needs Burp Collaborator, which is Pro-only, and I run Community.
 
 ## The point
 

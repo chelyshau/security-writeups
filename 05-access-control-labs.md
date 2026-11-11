@@ -1,6 +1,6 @@
 # Broken Access Control: 12 Academy Labs, 5 Patterns
 
-**Final draft.** PortSwigger Web Security Academy, Access Control topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
+PortSwigger Web Security Academy, Access Control topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
 
 ## The point
 

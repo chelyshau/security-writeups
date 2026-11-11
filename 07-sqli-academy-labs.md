@@ -1,6 +1,6 @@
 # SQL Injection Academy Labs: 6 Labs, 4 Oracles
 
-**Final draft.** PortSwigger Web Security Academy, SQL injection topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
+PortSwigger Web Security Academy, SQL injection topic, solved October 2026 as training. These are public training labs, not client work and not real targets. No per-instance values, no secrets, no screenshots: only the patterns and the methodology.
 
 This write-up is a lab companion to my general manual SQL injection methodology, already published as 04-manual-sqli-methodology.md. It does not repeat that guide: no detection-order theory, no second-order, no NoSQL, GraphQL, or ORM contexts. It covers only what these six Academy labs added: one filter bypass and five blind extractions, each through a different oracle. Two out-of-band labs are parked, not solved: they need Burp Collaborator, which is Pro-only, and I run Community.
 
