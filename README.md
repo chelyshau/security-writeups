@@ -38,6 +38,10 @@ Network Penetration Tester) and CEH certifications.
 7. [SQL Injection Academy Labs: 6 Labs, 4 Oracles](07-sqli-academy-labs.md)
    - six Academy labs through four oracles: filter bypass, boolean content
    and error oracles, time delays, and visible errors.
+8. [JWT Attacks Academy Labs: Every Attack Is a Verification Failure](08-jwt-attacks-academy-labs.md)
+   - six Academy labs in four patterns: unverified signatures and alg none,
+   weak HMAC secrets, token-supplied keys (jwk, jku, kid), and algorithm
+   confusion.
 
 All writeups are based on hands-on work in isolated training lab environments
 (PortSwigger Web Security Academy and TryHackMe labs). No real client or
