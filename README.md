@@ -42,6 +42,10 @@ Network Penetration Tester) and CEH certifications.
    - six Academy labs in four patterns: unverified signatures and alg none,
    weak HMAC secrets, token-supplied keys (jwk, jku, kid), and algorithm
    confusion.
+9. [API Testing Academy Labs: The Front End Is Not the Boundary](09-api-security-academy-labs.md)
+   - four Academy labs in four patterns: documentation as a map of the real
+   surface, mass assignment through leaked response fields, hidden methods
+   named by the Allow header, and server-side parameter pollution.
 
 All writeups are based on hands-on work in isolated training lab environments
 (PortSwigger Web Security Academy and TryHackMe labs). No real client or
