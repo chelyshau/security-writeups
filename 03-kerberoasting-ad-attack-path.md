@@ -4,7 +4,7 @@
 
 ## Overview
 
-During Active Directory lab assessments, I repeatedly ran into the same situation: a low-privilege domain foothold, no obvious misconfiguration in front of me, and a domain controller that would not fall to anything noisy. In two separate lab exercises, the path forward turned out to be Kerberoasting - requesting Kerberos service tickets for domain service accounts and cracking them offline. This writeup walks through the technique as I actually applied it: why it works, how to find roastable accounts, how the cracking step fits into a longer attack chain, and what it looks like from the defensive side.
+During Active Directory lab work, I repeatedly ran into the same situation: a low-privilege domain foothold, no obvious misconfiguration in front of me, and a domain controller that would not fall to anything noisy. In two separate lab exercises, the path forward turned out to be Kerberoasting - requesting Kerberos service tickets for domain service accounts and cracking them offline. This writeup walks through the technique as I actually applied it: why it works, how to find roastable accounts, how the cracking step fits into a longer attack chain, and what it looks like from the defensive side.
 
 ## Why Kerberoasting Works
 
