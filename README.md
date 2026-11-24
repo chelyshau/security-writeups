@@ -46,6 +46,11 @@ Network Penetration Tester) and CEH certifications.
    - four Academy labs in four patterns: documentation as a map of the real
    surface, mass assignment through leaked response fields, hidden methods
    named by the Allow header, and server-side parameter pollution.
+10. [SSTI Academy Lab: The Template Engine Is an Interpreter](10-ssti-academy-labs.md)
+   - one Academy lab (ERB) in four patterns: arithmetic probes that separate
+   evaluation from reflection, engine identification by syntax, expressions
+   that reach the runtime directly, and unsandboxed engines that hand the
+   expression the whole runtime.
 
 All writeups are based on hands-on work in isolated training lab environments
 (PortSwigger Web Security Academy and TryHackMe labs). No real client or
