@@ -4,7 +4,7 @@
 
 ## Overview
 
-During Active Directory lab assessments, I repeatedly ran into the same situation: a low-privilege domain foothold, no obvious misconfiguration in front of me, and a domain controller that would not fall to anything noisy. In two separate lab engagements, the path forward turned out to be Kerberoasting - requesting Kerberos service tickets for domain service accounts and cracking them offline. This writeup walks through the technique as I actually applied it: why it works, how to find roastable accounts, how the cracking step fits into a longer attack chain, and what it looks like from the defensive side.
+During Active Directory lab assessments, I repeatedly ran into the same situation: a low-privilege domain foothold, no obvious misconfiguration in front of me, and a domain controller that would not fall to anything noisy. In two separate lab exercises, the path forward turned out to be Kerberoasting - requesting Kerberos service tickets for domain service accounts and cracking them offline. This writeup walks through the technique as I actually applied it: why it works, how to find roastable accounts, how the cracking step fits into a longer attack chain, and what it looks like from the defensive side.
 
 ## Why Kerberoasting Works
 
@@ -78,4 +78,4 @@ Having run this attack from the offensive side, the defensive fixes are straight
 
 Kerberoasting is one of those techniques that looks almost too simple to work - no exploit, no payload, just asking for tickets and cracking them at home. But it works precisely because it targets a human problem (bad service passwords, no rotation) rather than a software bug, and human problems do not get patched.
 
-In both lab engagements where I used it, the roasted credential was the turning point of the assessment: the moment the engagement went from "stuck with a low-privilege shell" to "reading the domain's attack graph in BloodHound." If there is one Active Directory technique worth practicing until it is muscle memory, this is a strong candidate - the tooling is simple, the opsec cost is low, and the payoff is routinely a full domain compromise path.
+In both lab exercises where I used it, the roasted credential was the turning point: the moment the exercise went from "stuck with a low-privilege shell" to "reading the domain's attack graph in BloodHound." If there is one Active Directory technique worth practicing until it is muscle memory, this is a strong candidate - the tooling is simple, the opsec cost is low, and the payoff is routinely a full domain compromise path.

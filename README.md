@@ -2,7 +2,9 @@
 
 Hands-on penetration testing lab writeups covering network pivoting, internal
 network attacks, web application exploitation methodology, and SQL injection
-testing methodology.
+testing methodology. A PortSwigger Web Security Academy series adds broken
+access control, SSRF, JWT attacks, API security, and server-side template
+injection, one topic at a time.
 
 **About me:** Independent penetration tester and security consultant with
 10+ years of information security experience, including 6 years on the
@@ -47,10 +49,10 @@ Network Penetration Tester) and CEH certifications.
    surface, mass assignment through leaked response fields, hidden methods
    named by the Allow header, and server-side parameter pollution.
 10. [SSTI Academy Lab: The Template Engine Is an Interpreter](10-ssti-academy-labs.md)
-   - one Academy lab (ERB) in four patterns: arithmetic probes that separate
-   evaluation from reflection, engine identification by syntax, expressions
-   that reach the runtime directly, and unsandboxed engines that hand the
-   expression the whole runtime.
+    - one Academy lab (ERB) in four patterns: arithmetic probes that separate
+    evaluation from reflection, engine identification by syntax, expressions
+    that reach the runtime directly, and unsandboxed engines that hand the
+    expression the whole runtime.
 
 All writeups are based on hands-on work in isolated training lab environments
 (PortSwigger Web Security Academy and TryHackMe labs). No real client or
